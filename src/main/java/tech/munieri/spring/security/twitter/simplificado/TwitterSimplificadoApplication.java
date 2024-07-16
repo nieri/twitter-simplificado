@@ -1,4 +1,4 @@
-package tech.munieri.spring.security.twitter_simplificado;
+package tech.munieri.spring.security.twitter.simplificado;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

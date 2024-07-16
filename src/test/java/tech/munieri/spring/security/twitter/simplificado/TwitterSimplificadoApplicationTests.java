@@ -1,4 +1,4 @@
-package tech.munieri.spring.security.twitter_simplificado;
+package tech.munieri.spring.security.twitter.simplificado;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
