@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
-@Table(name="tb_users")
+@Table(name = "tb_users")
 public class User {
 
     @Id
@@ -16,7 +16,6 @@ public class User {
 
     @Column(unique = true)
     private String username;
-
     private String password;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -26,6 +25,7 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles;
+
 
     public UUID getUserId() {
         return userId;
