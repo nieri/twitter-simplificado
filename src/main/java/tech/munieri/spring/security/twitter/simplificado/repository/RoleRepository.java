@@ -6,4 +6,6 @@ import tech.munieri.spring.security.twitter.simplificado.entities.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {
+
+    Role findByName(String name);
 }

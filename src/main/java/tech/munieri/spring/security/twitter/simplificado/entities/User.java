@@ -1,6 +1,8 @@
 package tech.munieri.spring.security.twitter.simplificado.entities;
 
 import jakarta.persistence.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import tech.munieri.spring.security.twitter.simplificado.controller.dto.LoginRequest;
 
 import java.util.Set;
 import java.util.UUID;
@@ -57,5 +59,9 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public boolean isLoginCorrect(LoginRequest loginRequest, PasswordEncoder passwordEncoder) {
+        return passwordEncoder.matches(loginRequest.password(), this.password);
     }
 }
